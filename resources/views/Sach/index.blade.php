@@ -5,13 +5,29 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>quan lý sách</h3>
+                    <h3>Quản lý sách</h3>
                 </div>
-                <div class="col-md-6">
-                    <a href="{{route('sach.create')}}" class="btn btn-primary float-end">thêm</a>
+                <form action="" method="GET" id="form-search">
+                <div class="card-header">
+                        <div class="input-group input-group-alt">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="text" class="form-control" name="key" value="" placeholder="Tìm tên truyện">
+                            </div>
+                            <div >
+                                <button class="btn btn-primary warning" type="submit"   >Tìm kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{route('sach.create')}}" class="btn btn-primary float-end">Thêm</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
+
+
+
         <div class="card-body">
             @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -22,8 +38,8 @@
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Tên sách</th>z
-                        <th>LSBN</th>
+                        <th>Tên sách</th>
+                        <th>ISBN</th>
                         <th>Tác giả</th>
                         <th>Thể loại</th>
                         <th>Số trang</th>
